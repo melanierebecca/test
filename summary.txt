@@ -1,0 +1,30 @@
+
+using System.Windows.Shapes;
+
+namespace splashWindow
+{
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    public partial class MainWindow : Window
+    {
+        
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
+        private void move(object sender,MouseButtonEventArgs e)
+
+        { DragMove(); }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+           if((un.Text=="admin")&&(pw.Text=="password"))
+            {
+                this.Close();
+                
+            }
+           else { MessageBox.Show("INCORRECT CREDENTIALS"); }
+        }
+    }
+}
